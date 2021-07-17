@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    body{
+      background-image: url('1136049.png');
+     background-position: bottom;
+    }
+    h1{
+      color: black;
+    }
+    .head{
+      background-color: #c8daea;
+      opacity:60%;
+      
+    }
+
+    div.showcase{
+      margin-top: 10px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      border: 1px gray solid;
+      width: 90%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    span{
+      margin:5px 10px;
+    }
+
+
+  </style>
+</head>
+<body>
+  <center>
+    <div class="head">
+      <h1>GCK sis</h1>
+    </div>
+  <div class="showcase">
+  </div>
+  </center>
+  <script>
+    const showcase=document.querySelector('.showcase')
+    var cp=''
+    const cnce='&#128540'
+    
+
+   //a
+   function a(){
+    var str=''
+    r=3
+    for(i=0;i<5;i++){
+      for(j=0;j<5;j++){
+        if((j==2 && i>0) || j<1 && i>0 ){
+          str=str+cnce
+        }
+        else if((i<1&&j==1) || (i==2 && j==1)){
+          
+          str=str+cnce
+         
+        }
+        else{
+          str=str+'&nbsp&nbsp&nbsp&nbsp&nbsp'
+          
+        }
+        
+      }
+      str=str+'<br>' 
+    }
+    cp=cp+`<span>&nbsp&nbsp&nbsp</span><span>${str}</span>`
+    showcase.innerHTML+=`<span>&nbsp&nbsp&nbsp</span><span>${str}</span>`
+    }
+    //i
+    function ii(){
+    var str=''
+    for(i=0;i<5;i++){
+      for(j=0;j<4;j++){
+        if(i<1 || i==4){
+          str=str+cnce
+          
+        }
+        else if((i>0&&i<4)&&(j==2)){
+          
+          str=str+cnce
+          
+        }
+        else{
+          str=str+'&nbsp&nbsp&nbsp&nbsp'
+          
+        }
+        
+      }
+      str=str+'<br>'
+      
+    }
+    cp=cp+`<span>&nbsp&nbsp&nbsp</span><span>${str}</span>`
+    showcase.innerHTML+=`<span>&nbsp&nbsp&nbsp</span><span>${str}</span>`
+      
+    }
+    //k
+    function k(){
+
+    var str=''
+    r=3
+    for(i=0;i<5;i++){
+      for(j=0;j<4;j++){
+        if((i==j+1 && j>1) || j<1 ){
+          str=str+cnce
+         
+        }
+        else if(r==j){
+          r--
+          str=str+cnce
+          
+        }
+        else{
+          str=str+'&nbsp&nbsp&nbsp'
+          
+        }
+      }
+      str=str+'<br>'
+      
+    }
+    cp=cp+`<span>&nbsp&nbsp&nbsp</span><span>${str}</span>`
+    showcase.innerHTML+=`<span>&nbsp&nbsp&nbsp</span><span>${str}</span>`
+    }
+    //v
+    function v(){
+    var str=''
+    for(i=0;i<5;i++){
+      for(j=0;j<6;j++){
+        if((j==5 && i<3) || j<1 && i<3){
+          str=str+cnce
+        }
+        else if((i==3&&j==2) || (i==3 && j==3) || (i==4 && j==3)){
+          str=str+cnce
+          
+        }
+        else{
+          str=str+'&nbsp&nbsp'
+        }   
+      }
+      str=str+'<br>'
+      
+    }
+    cp=cp+`<span>&nbsp&nbsp&nbsp</span><span>${str}</span>`
+    showcase.innerHTML+=`<span>&nbsp&nbsp&nbsp</span><span>${str}</span>`
+    }
+    k();
+    a();
+    v();
+    ii();
+  </script>
+</body>
+</html>
